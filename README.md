@@ -10,6 +10,17 @@ This project's script uses Google Cloud BigQuery, PySpark, scikit-learn, seaborn
 # Install and import libraries
 Install the required libraries (google-cloud-bigquery, pyspark, matplotlib, scikit-learn) and import the modules for data analysis, graph visualization (seaborn, Plotly), and machine learning (e. g. Logistic Regression, Decision Tree). It's also necessary to set up a Google Cloud project and enable the BigQuery API.
 
+
+# Usage
+1. Clone the repository using the web URL:
+   ```bash
+   (https://github.com/stteo150/ProiectLA.git)
+   ```
+2. Open the LAPr.zip archive and extract the file with the extension .ipynb
+3. Open the file in Google Colab
+4. Configure your BigQuery credentials and project details in Google Colab.
+5. Execute the cells sequentially to analyze the data and generate predictions.
+
 # Dataset
 This project utilizes a **public Google BigQuery dataset** that includes:
 * Average internet signal
@@ -124,19 +135,6 @@ This script automates the entire process of:
 * Logistic Regression had the best performance (89.7%), suggesting that the data is well represented by a linear model.
 * K-Means formed good quality clusters (Silhouette Score: 0.736), indicating a clear structure in the data.
 * Decision Tree and Random Forest models perform similarly but are inferior to Logistic Regression. They could be improved by optimizing parameters.
-
-# Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/CasapuIoana/learning-analytics.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd learning-analytics
-   ```
-3. Open the file in Google Colab
-4. Configure your BigQuery credentials and project details in Google Colab.
-5. Execute the cells sequentially to analyze the data and generate predictions.
 
 # License
 
