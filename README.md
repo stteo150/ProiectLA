@@ -137,7 +137,7 @@ This script automates the entire process of:
 * Decision Tree and Random Forest models perform similarly but are inferior to Logistic Regression. They could be improved by optimizing parameters.
 
 # License
-
+This project is open-source and available under the [GNU General Public License v3.0](LICENSE)
 
 # Contribution
 Feel free to contribute to this project by creating issues or submitting pull requests.
