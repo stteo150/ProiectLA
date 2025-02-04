@@ -14,7 +14,7 @@ Install the required libraries (google-cloud-bigquery, pyspark, matplotlib, scik
 # Usage
 1. Clone the repository using the web URL:
    ```bash
-   (https://github.com/stteo150/ProiectLA.git)
+   https://github.com/stteo150/ProiectLA.git
    ```
 2. Open the LAPr.zip archive and extract the file with the extension .ipynb
 3. Open the file in Google Colab
