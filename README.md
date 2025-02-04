@@ -80,12 +80,39 @@ Apply classification and clustering models using PySpark ML:
 2. Decision Tree & Random Forest
 * Apply a decision tree (DecisionTreeClassifier) ​​and a Random Forest (RandomForestClassifier).
 * Evaluate the accuracy of each model.
-* Compare the actual values ​​vs. predicted values ​​in a Plotly graph.
+* Compare the actual values ​​vs. predicted values of internet signal ​​in a Plotly graph.
 
 3. Clustering with K-Means
-* Apply K-Means Clustering with k=3 groups.
+* Apply K-Means Clustering with k=3 groups for net speed, signal and GPS satellites.
 * Performance is evaluated using Silhouette Score.
 * Visualize clusters in an interactive 3D scatter plot.
+
+# Results
+1. Logistic Regression Accuracy
+Accuracy of the Logistic Regression model: 89.7 %
+Interpretation: The Logistic Regression model performed best among all the classification models. An accuracy of 89.7% indicates that the model is able to correctly classify the signal (signal label) based on the features.
+Advantages: Logistic Regression is a simple and interpretable algorithm that works well in cases where the data is linearly separable.
+Possible improvements: If the data is not completely linearly separable, additional preprocessing or the use of a more complex model may be required.
+
+2. K-Means Clustering Silhouette Score
+Silhouette Score: 73.6 %
+Interpretation: The Silhouette Score is a measure of the cohesion and separation of clusters. A score of 73.6% indicates a good quality of the clusters formed by K-Means. The data is well grouped according to the provided features (signal, speed, satellites, precision).
+Advantages: K-Means is an efficient algorithm for clustering, and a high score suggests that the data is well distributed in the feature space.
+Possible improvements: Increasing the number of clusters (k) could improve the results if there are more distinct groups in the data.
+
+3. Decision Tree Classifier Accuracy
+Accuracy of the Decision Tree model: 55.6 %
+Interpretation: The Decision Tree model performs significantly worse, with an accuracy of only 55.6%. This may indicate that the model has overestimated the noise in the data or that there are complex relationships between features that a single decision tree cannot capture.
+Advantages: The decision tree is easy to interpret and can highlight simple rules in the data.
+Disadvantages: It tends to overfit in the case of a  highly variable data set.
+Possible improvements: Use regularization techniques or switch to a more robust algorithm, such as Random Forest.
+
+4. Random Forest Classifier Accuracy
+Random Forest Model Accuracy: 56.3 %
+Interpretation: Although Random Forest is a more robust extension of Decision Tree, the accuracy is slightly higher than Decision Tree, at 56.3%. This result may be influenced by the fact that the data is not complex enough or the number of trees is too small.
+Advantages: Random Forest is more robust and reduces the overlap of noise in the data.
+Disadvantages: May require careful configuration of hyperparameters (e.g., number of trees or maximum depth).
+Possible improvements: Tuning hyperparameters and using more balanced datasets can increase accuracy.
 
 # Conclusion
 This script automates the entire process of:
@@ -94,6 +121,9 @@ This script automates the entire process of:
 * Statistical analysis and visualization.
 * Building and evaluating ML models.
 * It uses both PySpark (for scalability) and Pandas & Plotly (for detailed visualizations). This type of analysis is useful for telecommunications, mobile network optimization, and understanding the impact of environmental factors on mobile internet performance.
+* Logistic Regression had the best performance (89.7%), suggesting that the data is well represented by a linear model.
+* K-Means formed good quality clusters (Silhouette Score: 0.736), indicating a clear structure in the data.
+* Decision Tree and Random Forest models perform similarly but are inferior to Logistic Regression. They could be improved by optimizing parameters.
 
 # License
 
