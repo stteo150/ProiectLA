@@ -16,8 +16,8 @@ Install the required libraries (google-cloud-bigquery, pyspark, matplotlib, scik
    ```bash
    https://github.com/stteo150/ProiectLA.git
    ```
-2. Open the LAPr.zip archive and extract the file with the extension .ipynb
-3. Open the file in Google Colab
+2. Download the full archive, then open the LAPr.zip archive 
+3. Extract the file with the extension .ipynb and open it in Google Colab
 4. Configure your BigQuery credentials and project details in Google Colab.
 5. Execute the cells sequentially to analyze the data and generate predictions.
 
